@@ -1,0 +1,16 @@
+{
+	"dev" :
+		{	
+			"host":"scrb0011",
+			"port":4567,
+			"username":"xxx",
+			"password":"yyy"		
+		},
+	"test" :
+		{
+			"host":"scrb0012",
+			"port":6834,
+			"username":"abc",
+			"password":"rkjp"	
+		} 
+}

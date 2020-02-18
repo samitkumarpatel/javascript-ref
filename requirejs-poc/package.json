@@ -1,0 +1,22 @@
+{
+  "name": "requirejs-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "grunt-karma": "^2.0.0",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "karma-jasmine": "*",
+    "karma-cli": "*",
+    "karma-requirejs": "*",
+    "karma-phantomjs-launcher": "*"
+  }
+}

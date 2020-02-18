@@ -1,0 +1,22 @@
+{
+  "name": "express_js",
+  "version": "1.0.0",
+  "description": "handlebar related poc",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.13.4",
+    "mocha": "^2.5.3",
+    "mongodb": "^2.1.18",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.5.2",
+    "parser": "^0.1.4",
+    "selenium-webdriver": "^2.53.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}

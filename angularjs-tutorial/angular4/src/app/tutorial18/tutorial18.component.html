@@ -1,0 +1,28 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <label>Name :</label>
+    <input type="text" #nameRef required minlength="4" name="name" ngModel/><br/>
+    <p>{{nameRef.className}}</p>
+    <br/>
+    <label>Age :</label>
+    <input type="text" #ageRef="ngModel" required name="age" ngModel/><br/>
+    <p [hidden]="ageRef.valid">age is mandatory</p>
+    <br/>
+    <div ngModelGroup="address">
+      <label>City :</label>
+      <input type="text" name="city" ngModel/>
+      <br/>
+
+      <label>Dist :</label>
+      <input type="text" name="dist" ngModel/>
+      <br/>
+
+      <label>zip :</label>
+      <input type="text" name="zip" ngModel/>
+      <br/>
+    </div>
+    
+    <label>email :</label>
+    <input type="email" name="email" ngModel/>
+    <br/>
+    <button [disabled]="!userForm.form.valid" type="submit">Ok</button>
+</form>

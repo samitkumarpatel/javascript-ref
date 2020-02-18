@@ -1,0 +1,29 @@
+{
+  "name": "angular_tutorial",
+  "version": "1.0.0",
+  "description": "angular tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "samitkumar.patel@maersk.com",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.3.0",
+    "body-parser": "^1.17.1",
+    "cassandra-driver": "^3.2.0",
+    "express": "^4.15.2",
+    "mocha": "^3.2.0",
+    "swagger-ui-express": "latest"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}

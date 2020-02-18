@@ -1,0 +1,14 @@
+{
+    "id":1001,
+    "name":"samit",
+    "version":"0.0.1-SNAPSHOT",
+    "designation":"normal",
+    "salary":4050.40,
+    "address" : [{
+        "addr1":"address1,Test Palli",
+        "addr2":"Near IM Park",
+        "city":"test city",
+        "state":"test state",
+        "country":"test country"
+    }]
+}

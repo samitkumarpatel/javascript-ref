@@ -1,0 +1,79 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "User API",
+        "description": "User CRUD API",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/test": {
+            "get": {
+                "summary": "get test name",
+                "description": "This will just return the name",
+                "tags": [
+                    "test"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "just a string"
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "summary": "get all users",
+                "description": "The will fetch all the users available in database.\n",
+                "tags": [
+                    "Users"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of price estimates by product"
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/user/{uid}": {
+            "get": {
+                "summary": "get a specific user",
+                "description": "The Will fetch a specific user based on the query",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "description": "uid of the user.",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "User"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An entity of user"
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        }
+    }
+}

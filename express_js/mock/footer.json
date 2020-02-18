@@ -1,0 +1,20 @@
+{
+    "footer" : [
+        {
+          "footerUrl" : "#",
+          "footerText" : "About us"
+        },
+        {
+            "footerUrl" : "#",
+            "footerText" : "Contact"
+        },
+        {
+            "footerUrl" : "#",
+            "footerText" : "Disclaimer"
+        },
+        {
+            "footerUrl" : "#",
+            "footerText" : "Help"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "node_js_tutorial",
+  "version": "1.0.0",
+  "description": "tutorial for different node package",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samitkumarpatel"
+  },
+  "keywords": [
+    "nodejs_tutorial"
+  ],
+  "author": "samit kumar patel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mocha": "^2.3.4"
+  }
+}

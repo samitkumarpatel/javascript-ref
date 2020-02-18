@@ -1,0 +1,24 @@
+{
+  "name": "ui-tutorial",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "1.12.3",
+    "requirejs": "latest",
+    "modernizr": "latest",
+    "respond": "~1.4.2",
+    "typeahead.js": "0.11.1",
+    "handlebars": "^4.0.5",
+    "masonry": "^4.1.0",
+    "bootstrap" : "^v3.3.7"
+  }
+}

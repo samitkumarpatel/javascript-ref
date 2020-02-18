@@ -1,0 +1,8 @@
+/target/
+*.project
+*.iml
+*.ipr
+*.idea
+/node_modules
+**/node_modules/
+

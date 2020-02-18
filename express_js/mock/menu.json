@@ -1,0 +1,38 @@
+{
+    "navigation" : [
+        {
+            "dropdown" : false,
+            "linkUrl" : "/ui/student",
+            "name" : "studentTemplate"
+        },
+        {
+            "dropdown" : true,
+            "linkUrl" : "/ui/operation",
+            "name" : "Operation",
+            "subnav" : [
+                {
+                    "linkUrl" : "/ui/student/create",
+                    "name" : "Create"
+                },
+                {
+                    "linkUrl" : "/ui/student/update",
+                    "name" : "Update"
+                },
+                {
+                    "linkUrl" : "/ui/student/delete",
+                    "name" : "Delete"
+                }
+            ]
+        },
+        {
+            "dropdown" : false,
+            "linkUrl" : "/ui/student/search",
+            "name" : "searchStudent"
+        },
+        {
+            "dropdown" : false,
+            "linkUrl" : "/ui/mango",
+            "name" : "mongodb-poc"
+        }
+    ]
+}

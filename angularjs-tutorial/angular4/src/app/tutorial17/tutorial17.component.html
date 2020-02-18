@@ -1,0 +1,26 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <label>Name :</label>
+    <input type="text" name="name" ngModel/>
+    <br/>
+    <label>Age :</label>
+    <input type="text" name="age" ngModel/>
+    <br/>
+    <div ngModelGroup="address">
+      <label>City :</label>
+      <input type="text" name="city" [ngModel]="myCity"/>
+      <br/>
+
+      <label>Dist :</label>
+      <input type="text" name="dist" ngModel/>
+      <br/>
+
+      <label>zip :</label>
+      <input type="text" name="zip" ngModel/>
+      <br/>
+    </div>
+    
+    <label>email :</label>
+    <input type="email" name="email" ngModel/>
+    <br/>
+    <button type="submit">Ok</button>
+</form>

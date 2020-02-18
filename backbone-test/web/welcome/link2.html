@@ -1,0 +1,112 @@
+<hr/>
+
+<div class="col-xs-6 well" id="link2-application-area"></div>
+<div class="col-xs-5" id="link2-application-result"></div>
+
+<script type="text/template" id="messages-app-result">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>operation</th>
+            </tr>
+        </thead>
+        <tbody>
+           <% _.each(messages,function(m){%>
+            <tr>
+                <td><%= m.id %></td>
+                <td><%= m.name %></td>
+                <td>
+                    <button class="btn btn-default" id="edit">Edit</button>
+                    <button class="btn btn-danger" id="delete">Delete</button>
+                </td>
+            </tr>
+           <% }); %> 
+        </tbody>
+    </table>
+</script>
+
+<script type="text/template" id="messages-app">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" class="input-sm" placeholder="id" id="msg_id"/>
+                </td>
+                <td>
+                    <input type="text" class="input-sm" placeholder="messages" id="msg_msg"/>
+                </td>
+                <td>
+                    <button id="add" class="btn btn-info">add</button>
+                </td>            
+            </tr>
+        </tbody>
+    </table>
+</script>
+
+<script type="text/javascript">
+    var WELCOME = WELCOME || {};
+    WELCOME.link2 = WELCOME.link1 || {};    
+    (function($,link2,b){
+        
+        link2.Messages = b.Collection.extend({
+            model:WELCOME.welcome1.Message
+        });
+        
+        var messages = new link2.Messages();
+        
+        link2.MessagesView = b.View.extend({
+            el : $("#link2-application-area"),
+            template : _.template($('#messages-app').html()),
+            events : {
+                "click #add" : "addMessage"
+            },
+            initialize : function(){
+                this.render();
+            },
+            render : function(){
+                this.$el.html(this.template);
+            },            
+            addMessage : function(){
+                var msg = new WELCOME.welcome1.Message();
+                msg.set('id',$('#msg_id').val());
+                msg.set('name',$('#msg_msg').val());
+                messages.add(msg);
+                new link2.MessageResultView({collection : messages});                
+            }
+        });
+        
+        link2.MessageResultView = b.View.extend({
+            el:$('#link2-application-result'),
+            template : _.template($('#messages-app-result').html()),
+            events : {
+                "click #edit" : "editMessage",
+                "click #delete" : "deleteMessage"
+            },
+            initialize : function(){
+                this.render();
+            },
+            render : function(){
+               //this.$el.html(this.template({collection : messages}));
+               this.$el.html(this.template({
+                   messages : this.collection.toJSON()
+               }));
+               return this;
+            },
+            editMessage : function(){
+                
+            },
+            deleteMessage : function(){
+                
+            }
+        });               
+                        
+        new link2.MessagesView();        
+        
+    }(jQuery,WELCOME.link2,Backbone));
+    
+    
+           
+</script>
+    
